@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Installazione Componente github_conn</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; margin: 0; padding: 20px; text-align: center; color: #333; }
+        h3 { margin-top: 10px; font-weight: 600; }
+        p { font-size: 14px; color: #666; }
+        .btn-container { margin-top: 30px; }
+        button { font-size: 14px; padding: 8px 20px; margin: 0 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; cursor: pointer; }
+        button.primary { background-color: #0078d4; color: white; border-color: #0078d4; font-weight: bold; }
+        button:hover { opacity: 0.9; }
+    </style>
+
+    <script language="VBScript">
+        Sub Window_OnLoad
+            window.resizeTo 480, 240
+        End Sub
+
+        Sub InstallaPacchetto
+            document.getElementById("stato").innerHTML = "Installazione in corso... Attendere."
+            Set objShell = CreateObject("WScript.Shell")
+            ' Esegue il comando pip in modo visibile ma pulito
+            ReturnCode = objShell.Run("cmd.exe /c python -m pip install github_conn", 1, True)
+            
+            If ReturnCode = 0 Then
+                MsgBox "L'installazione di 'github_conn' e completata con successo!", 64, "Successo"
+                window.close()
+            Else
+                MsgBox "Errore durante l'installazione. Verificare che Python e PIP siano configurati.", 16, "Errore"
+                document.getElementById("stato").innerHTML = ""
+            End If
+        End Sub
+
+        Sub Annulla
+            window.close()
+        End Sub
+    </script>
+</head>
+<body>
+
+    <h3>Estensione Richiesta</h3>
+    <p>Per continuare è necessario installare la libreria <b>github_conn</b>.</p>
+    <p id="stato" style="color: #d35400; font-weight: bold;"></p>
+
+    <div class="btn-container">
+        <button class="primary" onclick="InstallaPacchetto()">Accetta e Installa</button>
+        <button onclick="Annulla()">Annulla</button>
+    </div>
+
+</body>
+</html>
