@@ -17,7 +17,9 @@ def mostra_profilo_github(username):
             for nome_repo in repos:
                 print(f" - {nome_repo}")
         else:
-            print("\n[-] L'utente non ha repository pubblici o il profilo è privato.")
+            print(
+                "\n[-] L'utente non ha repository pubblici o il profilo è privato."
+            )
 
     except Exception as e:
         print(f"\n[!] Impossibile recuperare i dati per '{username}'.")
@@ -28,8 +30,9 @@ def mostra_profilo_github(username):
 
 # --- ESECUZIONE DELL'ESEMPIO ---
 if __name__ == "__main__":
-    # Esempio 1: Test con un profilo (sostituisci con un username reale se vuoi)
+    # Test con un profilo (sostituisci con un username reale)
     mostra_profilo_github("username")
 
-    # Esempio 2: Puoi decommentare la riga sotto per fare un altro test
-    # mostra_profilo_github("alessandro")
+    # Mantiene il terminale aperto impedendo la chiusura immediata
+    print("\n")
+    input("Premere INVIO per uscire dal programma...")
