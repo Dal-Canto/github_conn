@@ -22,6 +22,7 @@ Sviluppato con ❤️ da [Alessandro Dal-Canto](https://github.com/Dal-Canto)
 - 🌍 **Python 3.8+** - Compatibilità ampia con versioni moderne
 - 📝 **Documentazione completa** - Docstrings e esempi per ogni metodo
 - 🚀 **Logging integrato** - Debug facile con logging support
+- 📚 **GitHub Pages Docs** - [Documentazione online](https://dal-canto.github.io/github_conn)
 
 ## 🎯 Use Cases
 
