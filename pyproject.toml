@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "github_conn"
-version = "0.2.1"
+version = "0.3.0"
 authors = [
   { name="Alessandro", email="gargoalexdc@gmail.com" },
 ]
@@ -16,9 +16,17 @@ dependencies = [
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [project.urls]
-Homepage = "https://github.com"
+Homepage = "https://github.com/Dal-Canto/github_conn"
+Repository = "https://github.com/Dal-Canto/github_conn.git"
+Issues = "https://github.com/Dal-Canto/github_conn/issues"
