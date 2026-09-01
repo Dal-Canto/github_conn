@@ -9,8 +9,6 @@
 
 Un pacchetto Python **leggero e veloce** per connettersi all'API di GitHub. Con gestione errori robusta, validazione input, e supporto completo per l'autenticazione.
 
-Sviluppato con ❤️ da [Alessandro Dal-Canto](https://github.com/Dal-Canto)
-
 ## ✨ Caratteristiche principali
 
 - 🔐 **Autenticazione sicura** - Supporto per token GitHub
