@@ -1,0 +1,39 @@
+site_name: github_conn
+site_description: Lightweight Python client for GitHub API
+site_url: https://dal-canto.github.io/github_conn
+repo_url: https://github.com/Dal-Canto/github_conn
+repo_name: Dal-Canto/github_conn
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: blue
+    accent: blue
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - API Reference: api-reference.md
+  - Error Handling: errors.md
+  - Examples: examples.md
+  - Contributing: contributing.md
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - toc
+
+plugins:
+  - search
+  - minify
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Dal-Canto/github_conn
