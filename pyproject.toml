@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "github_conn"
-version = "0.2.1"
+version = "0.3.0"
 authors = [
   { name="Alessandro", email="gargoalexdc@gmail.com" },
 ]
@@ -16,9 +16,49 @@ dependencies = [
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.10.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
 ]
 
 [project.urls]
-Homepage = "https://github.com"
+Homepage = "https://github.com/Dal-Canto/github_conn"
+Repository = "https://github.com/Dal-Canto/github_conn.git"
+Issues = "https://github.com/Dal-Canto/github_conn/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=src/github_conn --cov-report=term-missing --strict-markers"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+]
+
+[tool.coverage.run]
+source = ["src/github_conn"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
