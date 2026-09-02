@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/github-conn.svg)](https://badge.fury.io/py/github-conn)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://github.com/Dal-Canto/github_conn/workflows/Tests%20and%20Code%20Quality/badge.svg)](https://github.com/Dal-Canto/github_conn/actions)
-[![Code Coverage](https://img.shields.io/badge/coverage-97%25-brightgreen)](https://github.com/Dal-Canto/github_conn)
+[![Code Coverage](https://img.shields.io/badge/coverage-87%25-brightgreen)](https://github.com/Dal-Canto/github_conn)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/Dal-Canto/github_conn?style=social)](https://github.com/Dal-Canto/github_conn)
 
@@ -18,11 +18,12 @@ Sviluppato con ❤️ da [Alessandro Dal-Canto](https://github.com/Dal-Canto)
 - ⚡ **Timeout configurabile** - Evita hang su connessioni lente
 - 📄 **Paginazione** - Supporto nativo per grandi risultati
 - 🛡️ **Gestione errori** - Exception classes specifiche per ogni tipo di errore
-- 📊 **97% test coverage** - Qualità enterprise con 25 unit test
+- 📊 **87% test coverage** - Qualità enterprise con 37 unit test
 - 🌍 **Python 3.8+** - Compatibilità ampia con versioni moderne
 - 📝 **Documentazione completa** - Docstrings e esempi per ogni metodo
 - 🚀 **Logging integrato** - Debug facile con logging support
 - 📚 **GitHub Pages Docs** - [Documentazione online](https://dal-canto.github.io/github_conn)
+- 🖥️ **CLI Tool** - Accedi all'API GitHub direttamente da terminal
 
 ## 🎯 Use Cases
 
@@ -81,6 +82,49 @@ new_repo = client.create_repo(
 )
 print(new_repo)
 ```
+
+## 🖥️ CLI Tool
+
+Utilizza github_conn direttamente da terminal! Installa le dipendenze CLI:
+
+```bash
+pip install github-conn[cli]
+```
+
+### Comandi disponibili
+
+```bash
+# Ottenere informazioni utente
+github-conn user torvalds
+
+# Elencare repository
+github-conn repos guido --per-page 5
+
+# Repository per linguaggio
+github-conn repos-by-language torvalds Python
+
+# Follower
+github-conn followers torvalds
+
+# Following
+github-conn following torvalds
+
+# Creare un repository (richiede autenticazione)
+export GITHUB_TOKEN=your_token
+github-conn create-repo --name my-repo --description "My awesome repo"
+
+# Output JSON
+github-conn user torvalds --json
+
+# Verbose output
+github-conn -v user torvalds
+```
+
+### Opzioni globali
+
+- `--token TOKEN` - Token GitHub (o variabile ambiente `GITHUB_TOKEN`)
+- `-v, --verbose` - Output verboso con debug
+- `--json` - Output in formato JSON (per ogni comando)
 
 ## Gestione degli errori
 

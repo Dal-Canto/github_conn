@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "github_conn"
-version = "0.3.1"
+version = "0.4.0"
 authors = [
   { name="Alessandro", email="gargoalexdc@gmail.com" },
 ]
@@ -39,6 +39,13 @@ dev = [
     "flake8>=6.0.0",
     "mypy>=1.0.0",
 ]
+cli = [
+    "click>=8.0.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+github-conn = "github_conn.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/Dal-Canto/github_conn"

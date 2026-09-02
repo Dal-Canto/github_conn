@@ -5,7 +5,70 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2024-12-XX
+
+### Added
+
+- **CLI Tool** - Full command-line interface with Click framework
+  - Commands: `user`, `repos`, `repos-names`, `followers`, `following`, `repos-by-language`, `create-repo`, `version`
+  - Output formats: Table (default), JSON (--json flag)
+  - Environment variable support: `GITHUB_TOKEN`
+  - Global options: `--token`, `--verbose` (-v)
+  - Rich terminal output with colored tables and status messages
+  - Full error handling and validation
+
+- **CLI Tests** - 12 comprehensive tests
+  - User profile retrieval with JSON output
+  - Repository listing with pagination
+  - Followers and following lists
+  - Language-based repository filtering
+  - Repository creation (with token validation)
+  - Version command
+  - 80% CLI coverage (37 total tests, 87% overall coverage)
+
+- **New Dependencies**
+  - Click>=8.0.0 for CLI framework
+  - Rich>=13.0.0 for rich terminal output
+
+### Changed
+
+- Version bumped to 0.4.0
+- pyproject.toml updated with CLI optional dependencies
+- CLI entry point: `github-conn` command
+
 ## [0.3.1] - 2024-09-01
+
+### Added
+
+- **Professional Documentation Site** - GitHub Pages with Material theme
+  - Complete API reference
+  - Installation and usage guides
+  - Error handling documentation
+  - 10 practical examples
+  - Contributing guidelines
+
+- **SEO Optimization**
+  - 9 keywords for PyPI discovery
+  - 6 GitHub topics for repository discovery
+  - Enhanced README with documentation links
+
+- **Automatic Documentation Deployment**
+  - GitHub Actions workflow for docs
+  - Auto-deployment on commits to main
+
+- **Additional Examples**
+  - User profile information
+  - Repository filtering by language
+  - Repository creation guide
+  - Pagination examples
+  - Comprehensive error handling
+
+### Changed
+
+- Enhanced pyproject.toml with keywords and development status classifier
+- Improved README with documentation site link
+
+## [0.3.0] - 2024-09-01
 
 ### Added
 

@@ -8,6 +8,8 @@ from .exceptions import (
     UnauthorizedError,
 )
 
+__version__ = "0.4.0"
+
 __all__ = [
     "GitHubClient",
     "GitHubConnException",
@@ -17,4 +19,5 @@ __all__ = [
     "NotFoundError",
     "UnauthorizedError",
 ]
+
 
