@@ -11,5 +11,7 @@ pkgbase = python-github_conn
 	makedepends = python-wheel
 	depends = python
 	depends = python-requests
+	source = https://github.com/Dal-Canto/github_conn/blob/main/dist/github_conn-0.2.1.tar.gz
+	sha256sums = SKIP
 
 pkgname = python-github_conn
