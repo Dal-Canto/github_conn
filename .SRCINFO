@@ -1,7 +1,7 @@
 pkgbase = python-github_conn
 	pkgdesc = Un pacchetto Python leggero e veloce per connettersi all'API di GitHub
 	pkgver = 3.0
-	pkgrel = 4
+	pkgrel = 1
 	url = https://github.com/Dal-Canto/github_conn
 	arch = any
 	license = MIT
