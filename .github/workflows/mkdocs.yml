@@ -1,0 +1,36 @@
+site_name: github_conn
+site_url: https://github.io
+repo_url: https://github.com
+
+theme:
+  name: material
+  palette:
+    # Tema scuro/chiaro automatico basato sul sistema dell'utente
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Guida all'uso: usage.md
+  - Gestione Errori: errors.md
+  - Changelog: changelog.md
