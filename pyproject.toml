@@ -12,6 +12,11 @@ description = "Lightweight Python client for GitHub API with robust error handli
 readme = "README.md"
 requires-python = ">=3.8"
 keywords = ["github", "api", "client", "github-api", "api-wrapper", "python", "rest-api", "github-client", "authentication", "pagination"]
+authors = [
+  { name="Alessandro Dal-Canto", email="gargoalexdc@gmail.com" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = [
     "requests>=2.28.0",
 ]
