@@ -157,3 +157,9 @@ client = GitHubClient(token='your_github_token')
 ## Esempi
 
 Vedi la cartella `examples/` per ulteriori esempi di utilizzo.
+
+## 📝 License
+
+Questo progetto è concesso in licenza sotto i termini della licenza MIT. 
+
+Copyright © 2024-2026 Alessandro Dal-Canto. Tutti i diritti riservati.
