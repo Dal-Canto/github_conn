@@ -4,17 +4,14 @@ build-backend = "hatchling.build"
 
 [project]
 name = "github_conn"
-version = "0.3.0"
+version = "0.4.0"
 authors = [
-  { name="Alessandro", email="gargoalexdc@gmail.com" },
+  { name="Alessandro Dal-Canto", email="gargoalexdc@gmail.com" },
 ]
 description = "Lightweight Python client for GitHub API with robust error handling, authentication, and pagination support"
 readme = "README.md"
 requires-python = ">=3.8"
 keywords = ["github", "api", "client", "github-api", "api-wrapper", "python", "rest-api", "github-client", "authentication", "pagination"]
-authors = [
-  { name="Alessandro Dal-Canto", email="gargoalexdc@gmail.com" },
-]
 license = "MIT"
 license-files = ["LICENSE"]
 dependencies = [
